@@ -1,0 +1,13 @@
+---
+- hosts: all 
+  become: true 
+  tasks: 
+   -  name: create a directory on all servers. 
+      file: 
+        path: /home/ubuntu/engineers 
+        state: directory 
+        mode: 700 
+        owner: ubuntu 
+        group: ubuntu 
+
+...

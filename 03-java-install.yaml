@@ -1,0 +1,14 @@
+---
+- name: install java on the test hosts 
+  hosts: all 
+  become: yes 
+  tasks: 
+   -  name: update apt package cache 
+      apt: # package module [ sudo apt install java] 
+       update_cache: yes 
+   -  name: install default-jdk package 
+      apt: 
+        name: default-jdk 
+        state: present 
+        
+...

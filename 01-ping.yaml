@@ -1,0 +1,10 @@
+--- 
+- hosts: dev # check the host information in the /etc/ansible/hosts [i] 
+  gather_facts: no 
+  remote_user: ansible 
+  tasks: 
+   -  name: Test remote connections 
+      ping: 
+      remote_user: ansible 
+
+...

@@ -1,0 +1,13 @@
+---
+- hosts: qa 
+  become: true 
+  tasks: 
+   -  name: create a file 
+      file: 
+        path: /home/ubuntu/class27 
+        state: touch 
+        mode: 777 
+        owner: ubuntu 
+        group: ubuntu
+ 
+...
